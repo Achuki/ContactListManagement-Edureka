@@ -1,0 +1,18 @@
+<div class="app-content">
+  <div class="group">
+
+    <form class="col-md-6" role="form" (submit)="login()"><br>
+    <h1>Login To Contact Management</h1>
+      <div class="form-group">
+        <input class="form-control" type="text" required [(ngModel)]="user.username" id="username" name="username">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" required [(ngModel)]="user.password" id="password" name="password">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" color="warn" type="submit" name="action">LOGIN</button><br><br>
+      </div>
+      <span id="err"><small>{{errorMsg}}</small></span>
+    </form>
+  </div>
+  <div>

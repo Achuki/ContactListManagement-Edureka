@@ -1,0 +1,13 @@
+<h2>
+  Welcome to Contact Management Home!
+
+  <div class="nav navbar-nav navbar-right">
+    <div class="navbar-brand">Account : {{username | uppercase}}</div>
+    <button class="btn btn-primary" (click)="logout()">Logout</button>
+  </div>
+</h2>
+<div class="app-content">
+  <div class="group">
+    <app-contact></app-contact>
+  </div>
+</div>

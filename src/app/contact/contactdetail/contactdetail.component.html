@@ -1,0 +1,34 @@
+<div *ngIf="contact" class="row">
+<div class="col-md-12">
+  <h2 *ngIf="contact.id">Contact Details</h2>
+  <h2 *ngIf="!contact.id">New Contact</h2>
+</div>
+</div>
+<div *ngIf="contact" class="row">
+  <form class="col-md-12">
+    <div class="form-group">
+      <label for="contact-name">Name</label>
+      <input class="form-control" name="contact-name" [(ngModel)]="contact.name" placeholder="Name" />
+    </div>
+    <div class="form-group">
+      <label for="contact-email">Email</label>
+      <input class="form-control" name="contact-email" [(ngModel)]="contact.email" placeholder="support@mlab.com"  />
+    </div>
+    <div class="form-group">
+      <label for="contact-phone-mobile">Phone</label>
+      <input class="form-control" name="contact-phone" [(ngModel)]="contact.phone" placeholder="1234567890" />
+    </div>
+    <div class="form-group">
+      <label for="contact-state">State</label>
+      <input class="form-control" name="contact-state" [(ngModel)]="contact.state" placeholder="CA" />
+    </div>
+    <div class="form-group">
+      <label for="contact-country">Country</label>
+      <input class="form-control" name="contact-country" [(ngModel)]="contact.country" placeholder="USA" />
+    </div>
+
+    <button class="btn btn-primary" *ngIf="!contact.id" (click)="createContact(contact)">Create</button>
+    <button class="btn btn-info" *ngIf="contact.id" (click)="updateContact(contact)">Update</button>
+    <button class="btn btn-danger" *ngIf="contact.id" (click)="deleteContact(contact)">Delete</button>
+  </form>
+</div>
